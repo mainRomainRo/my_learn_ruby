@@ -1,5 +1,6 @@
 Test First Ruby -- RSpec 3 Edition
 ==========
+romain && thibaut
 
 ### Set up instructions
 

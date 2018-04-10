@@ -60,57 +60,5 @@ def first_word(text)
 end
 
 
-=begin
 
-Ue fais une fonction split qui me recupere tout les mots
-et les mettent dans un array
-Ensuite je fais une boucle sur l’array pour mettre chaque
-mot en majuscule
-et je les mets dans un tableau nommé return
-
-Puis je fais plusieurs tests sur ce tableau
-1- Si la taille de ce tableau est égale à un, a
-lors il y a un seul mot, on sort de la boucle et on donne l’output
-2-Sinon alors si le mot du tableau est and, over, the : on ne fait rien
-Sauf si c'est the ET qu'il est en premiere position
-Ensuite je retourne le tout
-En utilisant chomp pour enlever le dernier espace qui est la à
-cause de la concatenation
-
-=end
-
-end
-
-def titleize(text)
-  @string = text
-  @words = @string.split(/\W+/)
-  @return =[]
-  @output = ""
-  i=0
-
-  @words.each do |x|
-    @return << x.capitalize
-  end
-
-  unless (@return.length == 1)
-
-    @return.each do |x|
-      i=i+1
-
-      if (x == "And") || (x == "Over") || (x == "The" && i!=1)
-       @output += x.downcase + " "
-     else
-      @output += x + " "
-     end
-
-   end
-     @output = @output.chomp(" ")
-
- else
-  @output = @return[0].capitalize
- end
-
-return @output
-
-end
 

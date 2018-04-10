@@ -1,6 +1,7 @@
 Test First Ruby -- RSpec 3 Edition
 ==========
-romain && thibaut
+
+Thibault && Romain 
 
 ### Set up instructions
 

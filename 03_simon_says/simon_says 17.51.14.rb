@@ -1,64 +1,35 @@
-#write your code here
-#La fonction repete ce qu'on dit
-def echo(text)
-  @text = text
-  return @text
-end#
-
-#La fonction repete ce qu'on dit en maj
-
-def shout(text)
-  @text = text
-  @shout = @text.upcase
-  return @shout
+# repete le mot greeting
+def echo(greeting)
+  greeting
 end
 
-#La fonction repete n fois les mots
-# n est à 1 par défaut
-#JE fais une boucle si n >1 (2 ou plus)
-#où la sortie est n fois le text
-#Deux fois sinon
-def repeat(text, n=1)
-  @rep = text
-  @n = n
-  @output = @rep
+# repete le mot en majuscule 
+def shout(str)
+  str.upcase
+end
 
-  if n>1
-    for i in 1...@n
-      @output += " " + @rep
-      i = i + 1
-    end
-  else
-    @output = "#{@rep} #{@rep}"
-
-  end
-
-  return @output
+# repeat les mot n fois/ 
+def repeat(str, number = 2)
+  ([str] * number).join(" ")
 end
 
 
-#Je me complique un peu la vie ici en faisant une boucle sur les
-#n premieres valeurs du texte
-#J'aurai pu juste faire string[0..n]...
-def start_of_word(text, n)
-  @start= ""
-  @n = n
-
-  for i in 0...@n
-    @start += text[i]
-    i = i+1
-  end
-
-  return @start
-end
-
-#J'utilise la fonction partition pour obtenir le premier mot
-def first_word(text)
-  @start = text
-  @return = @start.partition(" ").first
-  return @return
+def start_of_word(str, n = 0)
+  str.slice(0, n)
 end
 
 
+def first_word(str)
+  str.rpartition(" ").first
+end
+
+# 1 une faute ici pas 
+def titleize(str)
+  dictionary = ["the", "and"] 
+  words = str.split(" ") #split chaine dans tableaux
+  words.map { |word| word.capitalize!}
+  words[0].capitalize #en majuscule 
+  words.join(" ") #
+end
 
 
